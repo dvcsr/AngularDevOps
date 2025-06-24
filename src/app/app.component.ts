@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CounterService } from './counter.service';
@@ -16,7 +16,7 @@ export class AppComponent {
   counter = 0;
   userName = '';
 
-  constructor(public counterService: CounterService) {}
+  counterService = inject(CounterService);
 
   toggleVisibility() {
     this.isVisible = !this.isVisible;
