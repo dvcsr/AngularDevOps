@@ -39,8 +39,8 @@ jobs:
       run: npm run test -- --watch=false --browsers=ChromeHeadless
       
     - name: Build Application
-      run: npm run build -- --base-href=/AngularDevOps/
-      
+      run: npm run build -- --base-href=https://dvcsr.github.io/AngularDevOps/
+
     - name: Create 404.html for GitHub Pages SPA
       run: cp dist/angular-learning-project/browser/index.html dist/angular-learning-project/browser/404.html
       
