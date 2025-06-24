@@ -39,7 +39,10 @@ jobs:
       run: npm run test -- --watch=false --browsers=ChromeHeadless
       
     - name: Build Application
-      run: npm run build
+      run: npm run build -- --base-href=/AngularDevOps/
+      
+    - name: Create 404.html for GitHub Pages SPA
+      run: cp dist/angular-learning-project/index.html dist/angular-learning-project/404.html
       
     - name: Run Security Audit
       run: npm audit --audit-level=high
